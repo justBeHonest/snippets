@@ -1,0 +1,136 @@
+{
+
+	"Mobx Extends BaseViewModel": {
+		"scope": "dart",
+		"prefix": "vmeb",
+		"body": [
+			"import 'package:go2doctor/core/base/viewmodel/base_viewmodel.dart';",
+			"import 'package:mobx/mobx.dart';",
+			"part '${TM_FILENAME_BASE}.g.dart';",
+			"class $1ViewModel = _$1ViewModelBase with _$$1ViewModel;",
+			"abstract class _$1ViewModelBase extends BaseViewModel with Store {$2}"
+		],
+		"description": "Log output to console"
+	},
+
+	"Stful widget mobx view": {
+		"scope": "dart",
+		"prefix": "v",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"import '../viewmodel/${TM_FILENAME_BASE}model.dart';",
+			"class $1View extends StatefulWidget {",
+			"  const $1View({Key? key}) : super(key: key);",
+			"  @override",
+			"  State<$1View> createState() => _$1ViewState();",
+			"}",
+
+			"class _$1ViewState extends State<$1View> {",
+			"final _viewModel = $1ViewModel();",
+			"@override",
+			"void initState() {",
+			"super.initState();",
+			"_viewModel.setContext(context);",
+			"}",
+
+			"@override",
+			"Widget build(BuildContext context) {",
+			"return Scaffold(",
+			"body: Container(),",
+			");",
+			"}",
+			"}",
+		],
+		"description": "Log output to console"
+	},
+
+
+	"Create Model Class With json methods": {
+		"scope": "dart",
+		"prefix": "mwj",
+		"body": [
+			"import 'package:json_annotation/json_annotation.dart';",
+			"part '${TM_FILENAME_BASE}.g.dart';",
+			"@JsonSerializable()",
+			"class $1 {",
+			"factory $1.fromJson(Map<String, dynamic> json) => _$$1FromJson(json);",
+			"Map<String, dynamic> toJson() => _$$1ToJson(this);",
+			"}",
+		],
+		"description": "Json annotation model class"
+	},
+	"String Property": {
+		"scope": "dart",
+		"prefix": "fsn",
+		"body": [
+			"final String $1;",
+			"$2",
+		],
+		"description": "String Property"
+	},
+	"String? Property": {
+		"scope": "dart",
+		"prefix": "fs",
+		"body": [
+			"final String? $1;",
+			"$2",
+		],
+		"description": "String? Property"
+	},
+	"int Property": {
+		"scope": "dart",
+		"prefix": "fin",
+		"body": [
+			"final int $1;",
+			"$2",
+		],
+		"description": "int Property"
+	},
+	
+	"int? Property": {
+		"scope": "dart",
+		"prefix": "fi",
+		"body": [
+			"final int? $1;",
+			"$2",
+		],
+		"description": "int? Property"
+	},
+
+	"double Property": {
+		"scope": "dart",
+		"prefix": "fdn",
+		"body": [
+			"final double $1;",
+			"$2",
+		],
+		"description": "double Property"
+	},
+	"double? Property": {
+		"scope": "dart",
+		"prefix": "fd",
+		"body": [
+			"final double $1;",
+			"$2",
+		],
+		"description": "double Property"
+	},
+	"bool Property": {
+		"scope": "dart",
+		"prefix": "fbn",
+		"body": [
+			"final bool $1;",
+			"$2",
+		],
+		"description": "bool Property"
+	},
+	"bool? Property": {
+		"scope": "dart",
+		"prefix": "fb",
+		"body": [
+			"final bool? $1;",
+			"$2",
+		],
+		"description": "bool? Property"
+	}
+}
